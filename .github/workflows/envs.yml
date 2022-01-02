@@ -27,7 +27,6 @@ jobs:
           echo "'$GITHUB_ACTION_PATH' GITHUB_ACTION_PATH  The path where your action is located. You can use this path to access files located in the same repository as your action. This variable is only supported in composite actions."
           echo "'$GITHUB_ACTIONS' GITHUB_ACTIONS  Always set to true when GitHub Actions is running the workflow. You can use this variable to differentiate when tests are being run locally or by GitHub Actions."
           echo "'$GITHUB_ACTOR' GITHUB_ACTOR  The name of the person or app that initiated the workflow. For example, octocat."
-          echo "'${{github.actor}}' {{github.actor}}  ??The name of the person or app that initiated the workflow. For example, octocat."
           echo "'$GITHUB_REPOSITORY' GITHUB_REPOSITORY  The owner and repository name. For example, octocat/Hello-World."
           echo "'$GITHUB_EVENT_NAME' GITHUB_EVENT_NAME  The name of the webhook event that triggered the workflow."
           echo "'$GITHUB_EVENT_PATH' GITHUB_EVENT_PATH  The path of the file with the complete webhook event payload. For example, /github/workflow/event.json."
