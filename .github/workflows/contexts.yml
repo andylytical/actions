@@ -43,4 +43,17 @@ jobs:
           echo "'${{github.workflow}}' github.workflow"
           echo "'${{github.workspace}}' github.workspace"
 
-
+      - name: Job Context
+        run: |
+          echo "SPACES"
+          echo "'${{ job.container }}' job.container"
+          echo "'${{ job.container.id }}' job.container.id"
+          echo "'${{ job.container.network }}' job.container.network"
+          echo "'${{ job.services }}' job.services"
+          echo "'${{ job.status }}' job.status"
+          echo "NO SPACES"
+          echo "'${{job.container}}' job.container"
+          echo "'${{job.container.id}}' job.container.id"
+          echo "'${{job.container.network}}' job.container.network"
+          echo "'${{job.services}}' job.services"
+          echo "'${{job.status}}' job.status"
