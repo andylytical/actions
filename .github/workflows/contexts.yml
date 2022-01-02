@@ -43,17 +43,21 @@ jobs:
           echo "'${{github.workflow}}' github.workflow"
           echo "'${{github.workspace}}' github.workspace"
 
+      # Most job properties are container related.
+      # They will be empty if not using a container.
       - name: Job Context
         run: |
-          echo "SPACES"
+          echo "'${{ job }}' job"
           echo "'${{ job.container }}' job.container"
           echo "'${{ job.container.id }}' job.container.id"
           echo "'${{ job.container.network }}' job.container.network"
           echo "'${{ job.services }}' job.services"
           echo "'${{ job.status }}' job.status"
-          echo "NO SPACES"
-          echo "'${{job.container}}' job.container"
-          echo "'${{job.container.id}}' job.container.id"
-          echo "'${{job.container.network}}' job.container.network"
-          echo "'${{job.services}}' job.services"
-          echo "'${{job.status}}' job.status"
+
+      - name: Runner Context
+        run: |
+          echo "'${{ runner.name }}' runner.name"
+          echo "'${{ runner.os }}' runner.os"
+          echo "'${{ runner.arch }}' runner.arch"
+          echo "'${{ runner.temp }}' runner.temp"
+          echo "'${{ runner.tool_cache }}' runner.tool_cache"
