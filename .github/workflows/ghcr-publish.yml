@@ -11,6 +11,7 @@ name: GHCR Publish
 
 on:
   workflow_dispatch:
+  workflow_call:
   push:
     branches: [ "**" ]
     # Publish semver tags as releases.
